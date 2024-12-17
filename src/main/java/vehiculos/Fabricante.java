@@ -17,7 +17,7 @@ public class Fabricante {
 		listado.add(this);
 	}
 	
-	public Fabricante fabricaMayorVentas() {
+	public static Fabricante fabricaMayorVentas() {
 		Fabricante ganador = listado.get(0);
 		for (int i = 0; i < listado.size(); i++) {
 			if (listado.get(i).cantVehiculos > ganador.cantVehiculos) {
@@ -43,12 +43,12 @@ public class Fabricante {
 		return pais;
 	}
 
-	public static int getCantVehiculos() {
+	public int getCantVehiculos() {
 		return cantVehiculos;
 	}
 
-	public static void setCantVehiculos(int cantVehiculos) {
-		Fabricante.cantVehiculos = cantVehiculos;
+	public void setCantVehiculos(int cantVehiculos) {
+		this.cantVehiculos = cantVehiculos;
 	}
 
 }

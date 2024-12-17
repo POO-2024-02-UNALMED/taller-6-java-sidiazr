@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class Pais {
 	
-	private ArrayList<Pais> listado = new ArrayList<Pais>();
+	private static ArrayList<Pais> listado = new ArrayList<Pais>();
 	private String nombre;
 	
 	public int cantVendidos;
 	
-	public Pais() {listado.add(this)}
+	public Pais() {listado.add(this);}
 	
 	public Pais(String nombre) {
 		this.nombre = nombre;
-		listado.add(this)
+		listado.add(this);
 	}
 	
-	public Pais paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		Pais ganador = listado.get(0);
 		for (int i = 0; i < listado.size(); i++) {
 			if (listado.get(i).getCantVendidos() > ganador.getCantVendidos()) {

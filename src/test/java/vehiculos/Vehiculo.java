@@ -26,7 +26,7 @@ public class Vehiculo {
 		cantidadVehiculos++;
 	}
 	
-	public String vehiculosPorTipo() {
+	public static String vehiculosPorTipo() {
 		return "Automoviles: " + Automovil.getCantAutomoviles()
 				+ "\nCamionetas: " + Camioneta.getCantCamionetas()
 				+ "\nCamiones: " + Camion.getCantCamiones();
@@ -62,6 +62,14 @@ public class Vehiculo {
 	
 	public Fabricante getFabricante() {
 		return fabricante;
+	}
+	public static void setCantidadVehiculos(int i) {
+		Vehiculo.cantidadVehiculos = i;
+		
+	}
+	
+	public static int getCantidadVehiculos() {
+		return cantidadVehiculos;
 	}
 
 }
